@@ -11,12 +11,12 @@ const Navbar = () => {
 
     const links = <>
         <NavLink to="/"><li>Home</li></NavLink>
-        <NavLink to="/books"><li>Listed Books</li></NavLink>
-        <NavLink to="/pages"><li>Pages to read</li></NavLink>
+        <NavLink to="/listed-books"><li>Listed Books</li></NavLink>
+        <NavLink to="/pages-to-read"><li>Pages to read</li></NavLink>
     </>
 
     return (
-        <nav className='flex max-w-292 mx-auto justify-between py-5 items-center'>
+        <nav className='flex max-w-292 mx-auto justify-between py-5 items-center px-6 lg:px-0'>
             {/* Mobile menu */}
             {
                 openMenu && (
@@ -35,7 +35,7 @@ const Navbar = () => {
             <div className='flex items-center gap-2'>
 
                 <button onClick={handleOpenMenu} className='lg:hidden'>{openMenu ? <X /> : <Menu />}</button>
-                <Link to="/"><h4 className='text-xl md:text-2xl font-bold text-gray-700'>Book Vibe</h4></Link>
+                <Link to="/"><h4 className='text-xl md:text-2xl font-bold text-yellow-600'>Book Vibe</h4></Link>
             </div>
 
             <ul className='hidden lg:flex gap-6 text-gray-600'>

@@ -2,7 +2,7 @@
 
 const Header = () => {
     return (
-        <div className='relative hero-bg py-32 px-4 md:px-8 lg:px-16 max-w-292 mx-auto lg:min-h-138 bg-cover bg-center rounded-lg flex items-center'>
+        <div className='relative hero-bg py-32 px-4 md:px-8 lg:px-16 max-w-292 mx-auto lg:min-h-138 bg-cover bg-center rounded-lg flex items-center mb-10 md:mb-25'>
 
             <div className='absolute inset-0 bg-linear-to-r from-amber-300/30 to-transparent'></div>
 
