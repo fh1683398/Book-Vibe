@@ -26,7 +26,7 @@ const BookDetails = () => {
 
 
             <div className='flex-1 py-5 bg-gray-200 flex items-center justify-center rounded-lg'>
-                <div onClick={() => navigate(-1)} className='absolute top-2 left-8 lg:left-2 bg-gray-300 rounded-full p-2 hidden md:flex'>
+                <div onClick={() => navigate(-1)} className='absolute top-2 left-8 lg:left-2 bg-gray-300 rounded-full p-2 hidden md:flex cursor-pointer'>
                     <ArrowLeft size={15} />
 
                 </div>
@@ -63,11 +63,11 @@ const BookDetails = () => {
                 <div className='flex gap-2 md:gap-4 font-sans my-6'>
 
                     <Link>
-                        <button onClick={handleRead} className='px-4 py-2 rounded-lg bg-transparent border border-gray-300 font-medium text-gray-600 hover:bg-yellow-600 hover:border-yellow-600 hover:text-white'>Read</button>
+                        <button onClick={handleRead} className='px-4 py-2 rounded-lg bg-transparent border border-gray-300 font-medium text-gray-600 hover:bg-yellow-600 hover:border-yellow-600 hover:text-white cursor-pointer'>Read</button>
                     </Link>
 
                     <Link>
-                        <button onClick={handleWishList} className='px-4 py-2 rounded-lg bg-yellow-600 text-white hover:bg-yellow-500 font-medium'>Wishlist</button>
+                        <button onClick={handleWishList} className='px-4 py-2 rounded-lg bg-yellow-600 text-white hover:bg-yellow-500 font-medium cursor-pointer'>Wishlist</button>
                     </Link>
                 </div>
 
