@@ -33,3 +33,7 @@ nav{
 a.active{
   color: rgb(211, 142, 15)
 }
+
+html {
+  scroll-behavior: smooth;
+}

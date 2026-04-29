@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 const Footer = () => {
     return (
         <div className='bg-gray-900 py-20'>
-            <div className='max-w-292 mx-auto grid md:grid-cols-3 gap-10 md:gap-20'>
+            <div className='max-w-292 mx-auto grid md:grid-cols-3 gap-10 md:gap-20 px-4 lg:px-0'>
 
                 <div className = "">
                     <h4 className='text-yellow-600 text-2xl mb-4'>Book Vibe</h4>

@@ -10,7 +10,7 @@ const Header = () => {
 
                 <h1 className="mb-6 text-4xl md:text-5xl md:max-w-1/2 lg:max-w-1/2 font-bold text-white">Books to freshen up your bookshelf</h1>
                 
-                <button className="border border-white px-4 py-2 rounded-lg text-white hover:bg-gray-100 hover:text-black font-sans font-medium">View The List</button>
+                <a href="#books"><button className="border border-white px-4 py-2 rounded-lg text-white hover:bg-gray-100 hover:text-black font-sans font-medium">View The List</button></a>
             </div>
 
         </div>

@@ -43,7 +43,7 @@ const Navbar = () => {
             </ul>
 
             <div className=''>
-                <Link><button className='px-4 py-2 rounded-lg font-medium bg-yellow-600 text-white'>Sign In</button></Link>
+                <Link><button className='px-4 py-2 rounded-lg font-medium bg-yellow-600 text-white cursor-pointer'>Sign In</button></Link>
             </div>
 
         </nav>

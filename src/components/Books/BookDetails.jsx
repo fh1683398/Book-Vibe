@@ -1,21 +1,37 @@
 
-import { Link, useLoaderData, useParams } from 'react-router';
+import { ArrowLeft } from 'lucide-react';
+import { Link, useLoaderData, useNavigate, useParams } from 'react-router';
+import { saveReadBooks, saveWishList } from '../Utlities/utlities';
 
 
 const BookDetails = () => {
     const { bookId } = useParams()
+    const navigate = useNavigate()
     const idNumber = parseInt(bookId)
     const data = useLoaderData()
 
     const singleBook = data.find(b => b.bookId === idNumber)
-    console.log(singleBook)
 
-    // const { bookName, author, image, review, totalPages, rating, category, publisher } = singleBook
+    const handleRead = () => {
+        saveReadBooks(idNumber)
+    }
+    const handleWishList = () => {
+        saveWishList(idNumber)
+    }
 
     return (
-        <div className='max-w-292 mx-auto flex gap-6 mb-10 md:mb-20'>
+        <div className='max-w-292 mx-auto flex flex-col md:flex-row gap-6 mb-10 md:mb-20 md:relative px-6 lg:px-0'>
 
-            <div className='flex-1 py-5 bg-gray-200 flex items-center justify-center rounded-lg'><img className='max-h-80' src={singleBook.image} alt={singleBook.bookName} /></div>
+
+
+
+            <div className='flex-1 py-5 bg-gray-200 flex items-center justify-center rounded-lg'>
+                <div onClick={() => navigate(-1)} className='absolute top-2 left-8 lg:left-2 bg-gray-300 rounded-full p-2 hidden md:flex'>
+                    <ArrowLeft size={15} />
+
+                </div>
+                <img className='max-h-80' src={singleBook.image} alt={singleBook.bookName} />
+            </div>
 
             <div className='flex-1'>
 
@@ -45,8 +61,14 @@ const BookDetails = () => {
                 <p className='text-gray-600 font-sans mb-4'><span className='font-semibold'>Publisher:</span> {singleBook.publisher}</p>
 
                 <div className='flex gap-2 md:gap-4 font-sans my-6'>
-                    <Link><button className='px-4 py-2 rounded-lg bg-transparent border border-gray-300 font-medium text-gray-600 hover:bg-yellow-600 hover:border-yellow-600 hover:text-white'>Read</button></Link>
-                    <Link><button className='px-4 py-2 rounded-lg bg-yellow-600 text-white hover:bg-yellow-500 font-medium'>Wishlist</button></Link>
+
+                    <Link>
+                        <button onClick={handleRead} className='px-4 py-2 rounded-lg bg-transparent border border-gray-300 font-medium text-gray-600 hover:bg-yellow-600 hover:border-yellow-600 hover:text-white'>Read</button>
+                    </Link>
+
+                    <Link>
+                        <button onClick={handleWishList} className='px-4 py-2 rounded-lg bg-yellow-600 text-white hover:bg-yellow-500 font-medium'>Wishlist</button>
+                    </Link>
                 </div>
 
             </div>
